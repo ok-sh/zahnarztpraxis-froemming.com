@@ -1,0 +1,643 @@
+:root {
+  --text1: #5c5c5b;
+  --navBack: #373434;
+  --border1: #e7dcd0;
+  --sonnenGelb: rgb(255, 174, 25);
+  --navGelb: #ffd686;
+  --backColor: #eee3d6;
+}
+html {
+  scroll-behavior: smooth;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+}
+body {
+  background-color: #eee3d6;
+  color: #5c5c5b;
+  padding-top: 5rem;
+  overflow-x: hidden;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+strong {
+  font-weight: 500;
+  line-height: 2rem;
+}
+hr {
+  background-color: gray;
+  opacity: 0.7;
+}
+header {
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  z-index: 999;
+}
+
+nav {
+  position: relative;
+  display: flex;
+  font-family: "Oswald";
+  font-weight: 300;
+  font-size: 1.2rem;
+  color: #ffd686;
+
+  align-items: center;
+  height: 5rem;
+  background-color: #373434;
+  border-bottom: 1px;
+  border-bottom-style: solid;
+  border-color: #ffd686;
+}
+nav input.toggler {
+  position: relative;
+  top: 0px;
+  right: 0px;
+  height: 50px;
+  display: none;
+  opacity: 0;
+}
+/* Nav-logo */
+#logo {
+  width: auto;
+  height: 2.5rem;
+  margin: 10px 10px;
+  opacity: 0.75;
+  filter: invert(1);
+}
+nav .title {
+  font-size: 1.8rem;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  background-color: transparent;
+  height: 100%;
+  width: 50%;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: auto;
+}
+.nav-links li {
+  height: 100%;
+}
+.nav-links li a {
+  height: 100%;
+  align-items: center;
+  display: flex;
+  color: #ffd686;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: 0.1s ease-out;
+  outline: none;
+}
+.nav-links a:hover,
+.nav-links a:focus {
+  color: rgb(255, 174, 25) !important;
+  border-top: 2px solid rgb(255, 174, 25);
+
+  border-radius: 2px;
+}
+
+/* Burger-Menu */
+.burger {
+  display: none;
+  margin-left: auto;
+  cursor: pointer;
+  padding: 10px;
+}
+.burger .navicon {
+  background: gray;
+  display: block;
+  height: 2px;
+  position: relative;
+
+  transition: background 0.2 ease-out;
+  width: 20px;
+  border-radius: 2px;
+}
+.burger .navicon:before,
+.burger .navicon:after {
+  position: absolute;
+  background: gray;
+  content: "";
+  display: block;
+  height: 100%;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+
+.burger .navicon:before {
+  top: 5px;
+}
+
+.burger .navicon:after {
+  top: -5px;
+}
+
+.contentPic {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1000px;
+  border: 30px solid;
+  border-color: #e7dcd0;
+}
+
+section {
+  display: block;
+  margin: 0.5rem 2vw;
+  padding: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  clear: right;
+}
+.mainTitle {
+  margin: 0 1rem 2rem;
+}
+
+.section1 {
+  justify-content: center;
+  align-items: center;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  letter-spacing: 3px;
+  word-spacing: 5px;
+  color: #5c5c5b;
+  padding: 0.5rem 0.5rem;
+  text-align: center;
+}
+
+.zeile {
+  display: flex;
+  justify-content: center;
+}
+/* CARD  */
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2vw;
+  padding-top: 4.1rem;
+}
+.cardContentLeft, .cardContentRight {
+  font-size: 1.125rem;
+  text-align: left;
+  max-width: 480px;
+}
+.cardContentLeft{
+  margin-left: 0.75rem;
+}
+.cardContentRight {
+  margin-right: 0.75rem;
+}
+.mainContent img.contentPic {
+  width: 50vw;
+  max-width: 800px;
+}
+
+.karte {
+  -webkit-filter: sepia(20%);
+  -moz-filter: sepia(20%);
+  -ms-filter: sepia(20%);
+  -o-filter: sepia(20%);
+  filter: sepia(20%);
+  background-color: #e7dcd0;
+}
+.karteInnen {
+  margin: 1rem;
+  opacity: 1;
+  box-shadow: 0 0 7px gray;
+  width: 660px;
+  height: 400px;
+  overflow: hidden;
+  border: 0;
+}
+.karte .card {
+  justify-content: left;
+}
+/* --- Footer Begin --- */
+footer {
+  position: relative;
+  box-shadow: 0 1px 7px #8e8e8e82;
+  background-color: #373434;
+  color: #ffd686;
+  height: auto;
+  min-height: 125px;
+  width: 100%;
+  border-top: 2px #ffd686 solid;
+  border-bottom: solid #373434 0.5rem;
+}
+footer .container {
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  margin: 2rem 1rem 1rem;
+}
+
+footer .kontakt {
+  padding: 0.32rem;
+  font-family: "Antic Slab", serif;
+}
+footer .kontakt a {
+  font-family: "Antic Slab", serif;
+  text-align: right;
+  text-decoration: none;
+  color: #ffd686;
+}
+footer .kontakt a:hover {
+  text-decoration: none;
+  color: rgb(255, 174, 25);
+}
+footer .kontakt a:focus {
+  text-decoration: none;
+  color: rgb(255, 174, 25);
+  outline: none;
+}
+.borderBox::after {
+  border-right: #a08653b6 1px solid;
+  margin-right: 1rem;
+  content: "";
+  position: absolute;
+  display: flex;
+  z-index: 10;
+  width: 10px;
+  margin-right: 10px;
+}
+
+.copyright {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  bottom: 0px;
+  height: 100%;
+}
+.copyright h4 {
+  margin: 1rem;
+}
+
+.telefon {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-top: 0rem;
+}
+.telefon img {
+  height: 32px;
+  width: auto;
+  margin-right: 1rem;
+  opacity: 0.6;
+}
+footer .telefon img {
+  filter: invert(1);
+}
+.telefon span {
+  font-size: 1.1rem;
+}
+
+span.wichtig {
+  font-style: none;
+  color: rgb(255, 174, 25);
+}
+hr.reDisp {
+  display: none;
+}
+.rightAlign {
+  text-align: right;
+}
+.leftAlign {
+  text-align: left;
+}
+
+/* Slider */
+.slider {
+  display: block;
+}
+.sliderInnen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  display: block;
+  position: relative;
+  background-color: transparent;
+  margin: 1rem;
+  border: 2vw #e7dcd0 solid;
+  height: fit-content;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  justify-content: center;
+  opacity: 1;
+  box-shadow: 0 0 5px gray;
+  text-align: center;
+  transition: 2s ease;
+  height: fit-content;
+}
+.mySlides img {
+  max-width: 75vw;
+  height: 100%;
+  width: 100%;
+}
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 6px 14px 13px;
+  color: rgb(255, 174, 25);
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 9px;
+  user-select: none;
+  background-color: rgba(255, 255, 231, 0.712);
+}
+.next {
+  position: absolute;
+  right: 0;
+}
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+.dot-container {
+  text-align: center;
+  padding: 20px;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+.forLabel {
+  display: block;
+}
+.impressumLink a {
+  color: #ffd686;
+  text-decoration: none;
+  outline: none;
+  padding: 1.2rem;
+}
+.impressumLink a:hover,
+.impressumLink a:focus {
+  color: rgb(255, 174, 25);
+}
+.navImpressum {
+  margin-left: auto;
+  height: auto;
+  list-style: none;
+  background-color: #373434;
+  width: auto;
+  opacity: 0.92;
+  color: rgb(255, 174, 25);
+  align-items: center;
+  display: flex;
+  color: #ffd686;
+  text-decoration: none;
+  transition: ease-in 1s;
+  display: flex;
+  text-align: center;
+  justify-content: right;
+  list-style: none;
+  height: 100%;
+}
+.navImpressum li {
+  height: 100%;
+}
+.navImpressum li a {
+  align-items: center;
+  display: flex;
+  color: #ffd686;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: 0.1s ease-out;
+  outline: none;
+  height: 100%;
+}
+.navImpressum li a:hover {
+  color: rgb(255, 174, 25);
+  border-top: solid 1px rgb(255, 174, 25);
+}
+
+.impressum {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #e5dac9;
+  border-radius: 12px;
+  max-width: 960px;
+}
+
+.startSeite {
+  justify-content: right;
+  padding-right: 2.5rem;
+  text-decoration: none;
+  color: #ffd686;
+}
+#okanWeb {
+  text-decoration: none;
+  color: #5c5c5b;
+  transition: ease-out 0.3s;
+}
+#okanWeb:hover {
+  color: whitesmoke;
+}
+@media only screen and (min-width: 1850px) {
+  .karte .card {
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 1080px) {
+  nav .title {
+    font-size: 1.7rem;
+  }
+  .nav-links {
+    width: 65%;
+  }
+  .contentPic {
+    border-width: 2vw;
+  }
+  #prophylaxe {
+    display: block !important;
+  }
+  #prophylaxe h3 {
+    text-align: center !important;
+    margin: 0.5em auto;
+  }
+}
+
+@media all and (max-width: 980px) and (min-width: 980px) {
+  body {
+    margin-top: 100px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  nav .title {
+    font-size: 1.4em;
+    margin-right: auto;
+  }
+  #logo {
+    height: 2.3em;
+    margin: 10px 5px 5px;
+  }
+  .burger {
+    position: relative;
+    display: block;
+  }
+  .nav-links {
+    display: none;
+    margin-right: auto;
+
+    height: auto;
+    list-style: none;
+    background-color: #373434;
+    margin-right: auto;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.92;
+    border-bottom: 1px solid;
+    border-color: rgb(255, 174, 25);
+    transition: ease-in 1s;
+  }
+  .nav-links li {
+    border-bottom: 1px rgba(128, 128, 128, 0.596) solid;
+    position: relative;
+  }
+  .nav-links li a {
+    height: 100%;
+    margin: 0.8rem;
+    clear: both;
+    width: max-content;
+  }
+
+  /* ---------------------- */
+  ul.open {
+    position: absolute;
+    display: block;
+    top: 5rem;
+    left: 0px;
+  }
+  .openedBurger .navicon {
+    background: transparent;
+  }
+  .openedBurger .navicon:before {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+  .openedBurger .navicon:after {
+    transform: rotate(45deg);
+    top: 0;
+  }
+  /* ---------------------- */
+  .mainTitle {
+    font-size: 1em;
+  }
+  h3 {
+    text-align: center !important;
+    margin: 0.5em auto;
+  }
+  .cardContentLeft,
+  .cardContentRight {
+    text-align: center;
+    margin: 1rem auto;
+  }
+  .telefon {
+    justify-content: center;
+  }
+  .telefon img {
+    height: 18px;
+  }
+  .telefon span {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .card {
+    display: block;
+    flex-direction: row;
+  }
+  .contentPic {
+    border-width: 2vw;
+    display: block;
+    width: 90vw !important;
+  }
+  .karteInnen {
+    width: 80vw;
+  }
+  hr.reDisp {
+    display: block;
+    color: gray;
+    height: 1px;
+    border: rgb(75, 74, 74) 2px solid;
+    border-radius: 2px;
+  }
+  .sliderInnen {
+    display: block;
+  }
+  footer .container {
+    display: block;
+  }
+  .startSeite {
+    justify-content: right;
+    padding-right: 0.8rem;
+  }
+	.impressum h1 {
+	font-size: 10vw;
+}
+
+}
+@media only screen and (max-width: 380px) {
+  nav .title {
+    font-size: 1em;
+    margin-right: 0;
+    letter-spacing: 0;
+  }
+  #logo {
+    height: 80%;
+    width: auto;
+  }
+  body {
+    font-size: 14px;
+  }
+}
+
+/* End Responsive */
